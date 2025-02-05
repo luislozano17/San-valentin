@@ -1,0 +1,148 @@
+body {
+font-family: Arial, sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-color: pink;
+text-align: center;
+margin: 0;
+flex-direction: column;
+}
+
+.container {
+background: white;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.buttons {
+margin-top: 20px;
+}
+
+button {
+
+font-size: 18px;
+padding: 10px 20px;
+margin: 10px;
+border: none;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+#yesBtn {
+background-color: rgb(28, 128, 15);
+}
+
+#noBtn {
+background-color: rgb(255, 39, 39);
+}
+
+.imagen {
+width: 200px;
+height: auto;
+margin-top: 20px;
+}
+
+.hidden {
+display: none;
+}
+
+/* Animación de caída y agrandado de los corazones */
+@keyframes heart-fall {
+0% { 
+opacity: 1;
+transform: translateY(-100px) scale(0.5); /* Empieza fuera de la pantalla arriba */
+}
+100% { 
+opacity: 0; 
+transform: translateY(100vh) scale(1); /* Termina fuera de la pantalla abajo */
+}
+}
+
+.heart {
+position: fixed; /* No afecta el tamaño de la pantalla */
+color: pink; /* Corazones rosados */
+font-size: 100px; /* Tamaño equilibrado */
+animation: heart-fall 4s ease-out; /* Animación de caída */
+pointer-events: none; /* Los corazones no bloquean interacciones */
+}
+
+/* Estilos de los botones */
+button {
+font-weight: bold; /* Hace el texto en negrita */
+color: white; /* Color blanco para el texto */
+
+border: none;
+padding: 15px 30px;
+border-radius: 5px;
+cursor: pointer;
+font-size: 18px;
+transition: all 0.3s ease;
+}
+
+button:hover {
+background-color: #FF1493; /* Color de fondo al pasar el mouse */
+}
+
+button:active {
+transform: scale(1.1); /* Aumenta el tamaño cuando el botón es presionado */
+}
+
+/* Animación de caída y agrandado de los corazones */
+@keyframes heart-fall {
+0% { 
+opacity: 1;
+transform: translateY(-100px) scale(0.5); /* Empieza fuera de la pantalla arriba */
+}
+100% { 
+opacity: 0; 
+transform: translateY(100vh) scale(1); /* Termina fuera de la pantalla abajo */
+}
+}
+
+.heart {
+position: fixed; /* No afecta el tamaño de la pantalla */
+color: pink; /* Corazones rosados */
+font-size: 120px; /* Tamaño equilibrado */
+animation: heart-fall 4s ease-out; /* Animación de caída */
+pointer-events: none; /* Los corazones no bloquean interacciones */
+}
+
+/* Animación de crecimiento del botón */
+@keyframes growButton {
+    0% {
+        transform: scale(1); /* Tamaño original */
+    }
+    100% {
+        transform: scale(1.2); /* Tamaño más grande */
+    }
+}
+
+/* Nueva clase para agrandar el botón */
+#yesBtn.grow {
+    transform: scale(1.2); /* Aumenta el tamaño del botón */
+}
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px; /* Agrega espacio entre la imagen y los botones */
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los botones */
+}
